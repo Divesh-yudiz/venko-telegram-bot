@@ -24,7 +24,7 @@ bot.command('start', async (ctx) => {
 
     await ctx.replyWithMarkdown(
       `*Venko*\n\n` +
-      `🎮 infinate runner game!\n` +
+      `🎮 Infinate runner game!\n` +
       `🚀 Fun, fast-paced, and addictive action!`,
       Markup.inlineKeyboard([
         Markup.button.webApp('START', gameUrl)

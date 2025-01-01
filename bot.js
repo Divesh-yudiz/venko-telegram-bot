@@ -7,7 +7,7 @@ const GAME_URL = 'https://venko-telegram.game.webdevprojects.cloud/';
 
 const bot = new Telegraf(token);
 const app = express();
-const port = 3027;
+const port = 3335;
 
 app.use(bodyParser.json());
 
@@ -24,7 +24,7 @@ bot.command('start', async (ctx) => {
 
     await ctx.replyWithMarkdown(
       `*Venko*\n\n` +
-      `🎮 Bounce the ball to break all the bricks!\n` +
+      `🎮 infinate runner game!\n` +
       `🚀 Fun, fast-paced, and addictive action!`,
       Markup.inlineKeyboard([
         Markup.button.webApp('START', gameUrl)
@@ -51,5 +51,5 @@ process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'));
 
 // Set up webhook
-const url = 'https://venko-game-bot.game.webdevprojects.cloud/bot' + token;
+const url = 'https://venko-telegram-bot.game.webdevprojects.cloud/bot' + token;
 bot.telegram.setWebhook(url);

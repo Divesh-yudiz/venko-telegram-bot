@@ -23,9 +23,9 @@ bot.command('start', async (ctx) => {
       : GAME_URL;
 
     await ctx.replyWithMarkdown(
-      `*Venko*\n\n` +
-      `🎮 Infinate runner game!\n` +
-      `🚀 Fun, fast-paced, and addictive action!`,
+      `Welcome to QuaserTap! 🚀✨ \n\n` +
+      `I'm VENKO, your friendly cosmic companion, here to guide you through an epic space adventure!\n` +
+      `Your journey begins now - become a legend among the stars. Blast off and happy tapping! 🌌🛸`,
       Markup.inlineKeyboard([
         Markup.button.webApp('START', gameUrl)
       ])

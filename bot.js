@@ -24,7 +24,7 @@ bot.command('start', async (ctx) => {
 
     await ctx.replyWithMarkdown(
       `Welcome to QuaserTap! 🚀✨ \n\n` +
-      `I'm VENKO, your friendly cosmic companion, here to guide you through an epic space adventure!\n` +
+      `I'm VENKO, your friendly cosmic companion, here to guide you through an epic space adventure!\n\n` +
       `Your journey begins now - become a legend among the stars. Blast off and happy tapping! 🌌🛸`,
       Markup.inlineKeyboard([
         Markup.button.webApp('START', gameUrl)

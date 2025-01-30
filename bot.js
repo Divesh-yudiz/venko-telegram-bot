@@ -2,7 +2,7 @@ const { Telegraf, Markup } = require('telegraf');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const token = '8116021386:AAF61p6nNYM_J8B3onl7FgiN6GNIGfMuPm4';
+const token = '7514501239:AAEM4XbcJgyiSQKklphTOxswXH8_DPSpBk0';
 const GAME_URL = 'https://venko-telegram.game.webdevprojects.cloud/';
 
 const bot = new Telegraf(token);

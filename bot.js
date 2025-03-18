@@ -1,13 +1,15 @@
+require('dotenv').config()
 const { Telegraf, Markup } = require('telegraf');
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const token = '7678807583:AAFDDWSBJzgVN8c9iiMgAvgsbAedhj9fIJ0';
-const GAME_URL = 'https://venko-telegram.game.webdevprojects.cloud/';
+const token = process.env.TOKEN;
+const GAME_URL = process.env.GAME_URL;
+const BOT_URL = process.env.BOT_URL;
 
 const bot = new Telegraf(token);
 const app = express();
-const port = 3335;
+const port = process.env.PORT;
 
 app.use(bodyParser.json());
 
@@ -51,5 +53,5 @@ process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'));
 
 // Set up webhook
-const url = 'https://venko-telegram-bot.game.webdevprojects.cloud/bot' + token;
+const url = BOT_URL + token;
 bot.telegram.setWebhook(url);
